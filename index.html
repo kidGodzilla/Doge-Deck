@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <title>Doge Deck</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" rel='stylesheet' type='text/css'>
+    <link href="http://rawgithub.com/noelboss/featherlight/master/release/featherlight.min.css" rel='stylesheet' type='text/css'>
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <header>
+        <div><h1 class="wow bounceIn"><img src="favicon.ico" style="height: 32px"> Doge Deck</h1></div>
+        <div class="r wow bounceIn">
+            <button id="addBtn">Add Doge</button>
+        </div>
+    </header>
+    <section class="main"></section>
+    <div class="overlay">
+        <div class="centerBox wow fadeInUp">
+            <form id="addDoge">
+                <h3>Add Doge</h3>
+                <hr>
+                <div><div>Name: * </div><div><input type="text" placeholder="Name your Doge" id="name"></div></div>
+                <div><div>Image URL: * </div><div><input type="text" placeholder="An image of your Doge (Include http://)" id="image"></div></div>
+                <div><div>Tagline: </div><div><input type="text" placeholder="Your Doge's tagline or slogan" id="tagline"></div></div>
+                <div><div>Age: </div><div><input type="text" placeholder="Let us know how old your Doge is" id="age"></div></div>
+                <div><div>Color: </div><div><input type="text" placeholder="What color(s) is your Doge?" id="color"></div></div>
+                <div><div>Description: </div><div><input type="text" placeholder="Describe your Doge" id="description"></div></div>
+                <div><div> </div><div><input type="submit" value="CANCEL" id="cancel"> <input type="submit" value="ADD" id="submit"></div></div>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/x-handlebars" id="template">
+        <div class="card wow bounceIn">
+        <a class="shake" data-featherlight="{{image}}"><img src="{{image}}"></a>
+            <h2>{{name}}</h2>
+            <i>{{tagline}}</i>
+            <ul>
+                {{#if age}}<li><strong>Age:</strong>  {{age}}</li>{{/if}}
+                {{#if color}}<li><strong>Color:</strong>  {{color}}</li>{{/if}}
+            </ul>
+            <p>{{{description}}}</p>
+        </div>
+    </script>
+
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
+    <script type="text/javascript" src="http://rawgithub.com/noelboss/featherlight/master/release/featherlight.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
+    <script type="text/javascript" src="scripts/ToolBelt.js"></script>
+    <script type="text/javascript" src="scripts/item.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+</body>
+</html>

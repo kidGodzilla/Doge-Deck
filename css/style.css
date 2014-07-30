@@ -1,0 +1,178 @@
+@-webkit-keyframes spaceboots {
+    0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+.shake:hover,
+.shake:focus {
+    -webkit-animation-name: spaceboots;
+    -webkit-animation-duration: 0.8s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+.shake {
+    display:inline-block
+}
+body {
+    background-color: #f9f9f9;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-text-stroke: 1px rgba(0,0,0,0.3);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+header {
+    width: 100%;
+    background-color: #eee;
+
+}
+h1 {
+    font-family: 'Roboto Slab', serif;
+    padding: 20px;
+    padding-left: 45px;
+    color: #444;
+    text-transform: uppercase;
+    font-size: 3em;
+}
+.r {
+    position: absolute;
+    top: 28px;
+    right: 20px;
+}
+.r span, .r select {
+    font-size: 2em;
+}
+.main {
+    width: 100%;
+    text-align:center;
+}
+div.card {
+    display: inline-block;
+    background-color: #fff;
+    margin: 20px;
+    width: 320px;
+    min-height: 540px;
+    vertical-align: top;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    text-align:center;
+    box-shadow: 1px 5px 7px rgba(0,0,0,0.05);
+    padding: 20px;
+}
+.card p {
+    margin: 10px;
+}
+.card img {
+    width: 275px;
+    margin: 10px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+    border-radius: 3px;
+    transition: all 1s ease-in-out;
+}
+/*.card img:hover {
+    border-radius: 50%;
+}*/
+.card ul {
+    margin: 10px;
+    list-style-type: none;
+}
+button, input[type=submit] {
+    padding: 14px 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    -webkit-text-stroke: 0;
+    background-color: #43ac6a;
+    border-color: #3c9a5f;
+    border-radius: 3px;
+    font-size: 1.4em;
+}
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    display: none;
+    transition: all 0.7s ease-in-out;
+}
+.centerBox {
+    position: absolute;
+    top: 25%;
+    left: 12.5%;
+    width: 75%;
+    min-width: 50%;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 25px;
+    font-size: 1.5em;
+}
+.centerBox h3 {
+    text-align: center;
+}
+.centerBox input[type=text] {
+    font-size: 1.2em;
+    padding: 5px;
+    width: 90%;
+
+}
+.centerBox form > div {
+    width: 100%;
+    padding: 5px 10px;
+}
+.centerBox form > div > div:nth-child(odd) {
+    display: inline-block;
+    width: 40%;
+}
+.centerBox form > div > div:nth-child(even) {
+    display: inline-block;
+    text-align: right;
+    width: 59%;
+}
+.centerBox hr {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.centerBox input[type=submit] {
+    font-size: 0.85em;
+    padding: 10px 0px;
+    width: 160px;
+}
+#submit {
+    margin-left: 10px;
+    font-weight: bold;
+}
+#cancel {
+    background-color: #008cba;
+}
+#addBtn {
+    margin-top: -6px;
+}
+.featherlight-close {
+    display: none;
+}
+@media all and (max-width:768px) {
+    h1 {
+        text-align:center;
+    }
+    .card {
+        width: 80%;
+    }
+    .centerBox {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
